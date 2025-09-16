@@ -29,7 +29,7 @@ def template_pitcher(source, pitch_ref, model, hifigan, steps=50, shift_semi=0):
     if current_length != target_length:
         if current_length < target_length:
             f0_ref = np.pad(f0_ref, (0, target_length - current_length), 'constant', constant_values=0)
-        else:l
+        else:
             pad_length = current_length - target_length
             min_val = source_mel.min()
             source_mel = np.pad(source_mel, ((0, 0), (0, pad_length)), 'constant', constant_values=min_val)
